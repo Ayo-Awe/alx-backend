@@ -59,6 +59,7 @@ class Server:
         return {
             "index": index,
             "data": data,
-            "next_index": None if len(target_keys) < page_size+1 else target_keys[-1],
+            "next_index": None if len(target_keys) <
+            page_size+1 else target_keys[-1],
             "page_size": len(data)
         }
