@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+"""This module contains code for basic cache
+"""
+
 from base_caching import BaseCaching
 
 
