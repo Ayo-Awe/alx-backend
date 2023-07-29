@@ -26,7 +26,6 @@ class LFUCache(BaseCaching):
         if len(self.cache_data) == self \
                 .MAX_ITEMS and key not in self.cache_data:
             discard_key = lowest_key_by_frequency_and_rank(self.__ranked_keys)
-            print("discard", discard_key)
             del self.cache_data[discard_key]
             del self.__ranked_keys[discard_key]
             print("DISCARD: {}".format(discard_key))
@@ -57,7 +56,6 @@ class LFUCache(BaseCaching):
             self.__ranked_keys[key] = (frequency+1, self.__next_rank)
 
         self.__next_rank += 1
-        print(self.__ranked_keys)
 
         return self.cache_data.get(key)
 
